@@ -1,0 +1,175 @@
+$heraderHeight: 67px;
+$golden: #eca83b;
+$golden-light: #f1ce94;
+
+.header__container {
+  background: url('../img/mas.png'), url('../img/header.jpg');     
+  background-size: 100%, cover;
+  background-attachment: scroll,fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-position: 10% 100%;
+  height: 620px;
+  font-size: 10px;
+  overflow: hidden;
+}
+.header-wrap {
+  width: 100%;
+  position: fixed;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  height: $heraderHeight;
+  align-items: center;
+  font-family: "robotoregular";
+  z-index: 8888;
+   // background-color: rgba(256,256,256,0.5);
+}
+.header-wrap-fix {
+  background-color: rgba(0,0,0,0.6);
+  z-index: 99999;
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  .header__logo {
+    height: 50%;
+    align-items: center;
+    justify-content: center;
+  }    
+  .logo__wrap {
+    width: 60px;
+    height: 40px;
+  }  
+  .icon-logo {
+    position: absolute;
+    width: 50px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+  }              
+}
+.header__logo {
+ display: flex;
+ color: white;
+ flex-grow: 1;
+ height: 100%;
+ align-items: flex-end;
+ justify-content: center;
+ font-size: 16px;
+}
+.logo__wrap {
+  display: inline-block;
+  position: relative;
+  width: 60px;
+  height: 100px;
+}
+.header__nav {
+  display: flex;
+  height: 100%;
+  justify-content: flex-end;
+  flex-grow: 5;
+}
+.header__item {
+  box-sizing: border-box;
+  line-height: $heraderHeight;
+  display: list-item;
+  height: 100%;
+  font-size: 18px;
+  margin-left: 1.5%;
+  align-self: center;
+  color: $golden-light;
+  text-decoration: none;
+  text-transform: uppercase;
+  list-style-type: disc;
+  padding: 0 20px 0 10px;
+  border-bottom: 3px solid rgba(1,2,3,0);
+  &:hover {
+    color: $golden;
+    border-bottom: 2px solid $golden;
+    transition: 0.5s;
+  }
+  &:first-child {
+    list-style-type: none;
+  }
+}
+.header__phone {
+  display: flex;
+  flex-grow: 1;
+  height: 100%;
+  justify-content: flex-end;
+  padding-right: 30px;
+  align-self: center;
+  font-size: 12px;
+}
+.header__num {
+  padding: 20px 0;
+  align-self: center;
+  color: $golden-light;
+  font-size: 1.5em;
+  text-decoration: none;
+  // font-weight: bold;
+  &:hover {
+    color: $golden;
+    transition: 0.5s;
+  }
+}
+.banner-wrap {
+  height: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  background-color: rgba(251,251,251,0.2);
+}
+.banner_container {
+  width: 500px;
+  height: 450px;
+  display: block;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: rgba(1,1,1,0.2);
+}
+.banner_title {
+  width: 100%;
+  color: white;
+  text-transform: uppercase;
+  h1 {
+    font-size: 40px;
+    margin: 0;
+    &:first-letter {
+      color: $golden-light;
+    }
+  }
+  &:before {
+    content: "";
+    display: block;
+    position: relative;
+    left: 50%;
+    margin: 0 0 10px 0;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 2px;
+    text-align: center;
+    background-color: #fff;
+  }
+  &:after {
+    content: "";
+    display: block;
+    position: relative;
+    left: 50%;
+    margin: 10px 0 0 0;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 2px;
+    text-align: center;
+    background-color: #fff;
+  }
+}
+.banner_descr {
+  padding-top: 120px;
+  font-size: 28px;
+  color: white;
+  padding-bottom: 30px;
+  }
