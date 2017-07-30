@@ -3,10 +3,11 @@ body {
   background-color: grey;
   font-family: "Georgia";
 }
-p {
+p,h1,h2,h3,h4,h5,h6 {
 	margin: 0;
 	padding: 0;
 }
 
 @import 'common/header';
 @import 'common/stats';
+@import 'common/about';
