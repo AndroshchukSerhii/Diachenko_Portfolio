@@ -1,12 +1,12 @@
 .about_wrap {
 	// display: flex;
-	background: url('../img/border1.png'), url('../img/img1.jpg');
-	background-size: 100%, cover;
-    background-attachment: scroll,fixed;
+	background: url('../img/border1.png'),url('../img/border2.png'), url('../img/img1.jpg');
+	background-size: 100%, 100%, cover;
+    background-attachment: scroll,scroll,fixed;
     background-position: center;
     background-repeat: no-repeat;
-    background-position: 10% 0%;
-	padding: 0 100px;
+    background-position: 10% 0,10% 100%;
+	padding: 40px 100px;
 }
 .about_container {
 	display: flex;
