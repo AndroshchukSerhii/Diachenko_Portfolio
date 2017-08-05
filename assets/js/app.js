@@ -18,3 +18,122 @@ function openTab(evt, Name) {
     document.getElementById(Name).style.display = "flex";
     evt.currentTarget.className += " active";
 }
+var scrollPage = (function() {
+  return {
+    set: function() {
+      $("a[href*=#]").on("click", function(e){
+          var anchor = $(this);
+          $('html, body').stop().animate({
+              scrollTop: $(anchor.attr('href')).offset().top
+          }, 777);
+          e.preventDefault();
+          return false;
+      });
+    }
+  }
+}());
+
+var blogMenu = (function() {
+  var 
+    linkNav = document.querySelectorAll('[href^="#nav"]'),
+    V = 0.5, // скорость скрола при нажатии на меню
+    activeHeight =  50; // высота от верха экрана при которой срабатывает переключение
+  // var 
+    // stickySidebar = $('.header-wrap').offset().top + 300;
+    
+    var navFixed = $(".header-wrap"),
+        navHeight = $('.header-wrap').height();
+
+  return {
+    set: function(){  
+        var nav = $('.header-wrap');
+    
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 0) {
+            nav.addClass("header-wrap-fix");
+        } else {
+            nav.removeClass("header-wrap-fix");
+        }
+    });
+      window.addEventListener('scroll', function(e) {
+        var 
+          nav = document.querySelectorAll('[id^="nav"]');
+
+        // for (var i = 0; i < nav.length; i++) { 
+        //   // document.querySelector('a[href="#' + nav[i].id + '"]').className=((1 >= nav[i].getBoundingClientRect().top-activeHeight && nav[i].getBoundingClientRect().top >= activeHeight-nav[i].offsetHeight) ? 'blog__list-item_active' : '');
+        // }
+      }, false);
+    }
+  }
+}());
+
+$(document).ready(function(){
+    if ($('#section').length) {
+      scrollPage.set();
+    }
+    if ($('.header-wrap').length) {
+    blogMenu.set();
+	    }
+	$('.slider-two').owlCarousel({
+	    loop:true,
+	    margin:30,
+	    nav:true,
+	    smartSpeed:2000,
+	    center: false,
+	    stagePadding: 0,
+	    dots: false,
+	    autoplay: true,
+	    autoplayTimeout:4000,
+	    startPosition: 2,
+	    navText: ["&#10096;","&#10097;"],
+	    autoplayHoverPause: true,
+	    responsive:{
+	        0:{
+	            items:1
+	        },
+	        600:{
+	            items:1
+	        },
+	        1000:{
+	            items:1
+	        }
+	    }
+	})
+	$('.slider-three').owlCarousel({
+	    loop:true,
+	    margin:30,
+	    nav:false,
+	    smartSpeed:500,
+	    center: false,
+	    stagePadding: 0,
+	    dots: false,
+	    autoplay: true,
+	    autoplayTimeout:6000,
+	    startPosition: 2,
+	    navText: ["&#10096;","&#10097;"],
+	    autoplayHoverPause: true,
+	    responsive:{
+	        0:{
+	            items:2
+	        },
+	        600:{
+	            items:4
+	        },
+	        900:{
+	            items:5
+	        },
+	        1239:{
+	            items:6
+	        }
+	    }
+	})
+$(window).scroll(function (){
+    $(' .mov').each(function (){
+            var imagePos = $(this).offset().top;
+            var topOfWindow = $(window).scrollTop();
+            if (imagePos < topOfWindow+350) {
+                $(this).addClass($(this).data('animation'));
+            }
+        });
+    });﻿
+});

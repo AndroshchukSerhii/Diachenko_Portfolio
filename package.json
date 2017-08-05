@@ -30,6 +30,7 @@
     "vinyl-buffer": "^1.0.0"
   },
   "dependencies": {
-    "normalize.css": "^4.1.1"
+    "normalize.css": "^4.1.1",
+    "owl.carousel": "^2.2.0"
   }
 }
