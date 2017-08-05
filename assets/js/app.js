@@ -102,7 +102,7 @@ $(document).ready(function(){
 	$('.slider-three').owlCarousel({
 	    loop:true,
 	    margin:30,
-	    nav:false,
+	    nav:true,
 	    smartSpeed:500,
 	    center: false,
 	    stagePadding: 0,

@@ -36,7 +36,7 @@ $golden-light: #f1ce94;
     justify-content: center;
   }    
   .logo__wrap {
-    width: 60px;
+    width: 300px;
     height: 40px;
   }  
   .icon-logo {
@@ -52,15 +52,24 @@ $golden-light: #f1ce94;
  color: white;
  flex-grow: 1;
  height: 100%;
+ width:  300px;
  align-items: flex-end;
  justify-content: center;
  font-size: 16px;
 }
+.header_logo_item {
+    margin: 0 10px;
+    // padding: 0 30px;
+}
 .logo__wrap {
-  display: inline-block;
-  position: relative;
-  width: 60px;
-  height: 100px;
+  display: block;
+  text-align: center; 
+  float: left;
+  width: 100%;
+  height: 40px;
+  img {
+    height:  100%;
+  }
 }
 .header__nav {
   display: flex;

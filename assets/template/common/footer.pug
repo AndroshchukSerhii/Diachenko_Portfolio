@@ -1,9 +1,29 @@
 .contacts_wrap
 	.contacts_contain
 		.contacts_title
-			h2 Контакти
+			h2(class="contact_title__pre") Контакти
 		.contacts_left
-			span 
+			.contacts_item 
 				img(src="/assets/img/phone.png")
-			a(href="tel:0636120715") 0636120715
+				a(href="tel:0636120715") 0636120715
+			.contacts_item
+				img(src="/assets/img/insta.png")
+				a(href="#") @vova_diachenko
+			.contacts_item
+				img(src="/assets/img/gmail.png")
+				a(href="#") vova_diachenco@gmail.com
+			.contacts_item.contacts_item__line
+				a(href="#")
+					img(src="/assets/img/logo.png")
+			.contacts_item.contacts_item__line
+				a(href="#")
+					img(src="/assets/img/facebook.png")
 		.contacts_right
+			h3(class="callBack__title") Маєте запитання?
+			p(class="callBack__descr") Залиште свій номер телефону та ім'я і я вам зателефоную!
+			form(class="callBack__form")
+				.callBack__inpt-wrap
+					input( class="callBack__inpt" type="text" pattern="[A-Za-zА-Яа-яЁё]{2,15}" name="FirstName" placeholder="Your Name" required)
+					input( class="callBack__inpt" placeholder="Phone Number" type="tel" pattern="[0-9]{10,11}" name="phone" required)
+				.callBack__btn-wrap
+					input( class="callBack__btn" type="submit" value="Відправити")

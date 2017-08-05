@@ -17,6 +17,7 @@
 .program__title {
 	padding: 20px 0;
 	margin: 0;
+	// width: 	100%;
 	text-transform: uppercase;
 	align-self: center;
 	// font-size: 34px;
@@ -25,7 +26,7 @@
 		content: '';
 		display: block;
 		position: relative;
-		background-color: #000;
+		background-color: #742121;
 		height: 1px;
 		width: 80px;
 		left: 50%;
@@ -55,11 +56,11 @@
     border-bottom: 1px solid #7d7b7a;
     img {
     	max-width: 135px;
-    	height: 100px;
+    	height: 70px;
     }
 	button {
 	    float: left;
-	    width: 150px;
+	    width: 120px;
 	    border: none;
 	    background-color: inherit;
 	    outline: none;
@@ -70,11 +71,11 @@
 	    border-bottom: 2px solid rgba(1,1,1,0);
  		&:hover {
     		color: #111;
-    		border-bottom: 2px solid rgba(1,1,1,1);
+    		border-bottom: 2px solid rgba(116,33,33,1);
 		}
 		&.active {
 			color: #111;
-		    border-bottom: 2px solid rgba(1,1,1,1);
+		    border-bottom: 2px solid rgba(116,33,33,1);
 		}
 	}
 }
@@ -122,6 +123,7 @@
 .basic__registr {
 	width: 160px;
 	height: 40px;
+	margin: 30px 30px 0;
 	background-color: #111;
 	line-height: 40px;
 	text-align: center;

@@ -17,7 +17,7 @@
 		content: '';
 		display: block;
 		position: relative;
-		background-color: #000;
+		background-color: #742121;
 		height: 1px;
 		width: 80px;
 		left: 50%;
@@ -68,8 +68,14 @@
 	span {
 		width: 20%;
 		flex-grow: 1;
+		color: aqua;
 		justify-content: end;
 		text-align: right;
 		padding: 5px 10px 0 0;
+	}
+	p {
+		width: 	70%;
+		font-size: 12px;
+		padding: 0 0 5px 10px;
 	}
 }
